@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+   
+
+    <script>
+         /* function Chronic() {
+            let text = "Heart Dieseases";
+            let result = text.link("https://www.w3schools.com");
+            document.getElementById("chronic").innerHTML = result;
+           
+           
+            /*var chr = prompt("What Of Chronic Diesease are You Facing: ");
+            switch(chr){
+                case 1:
+                    document.body.innerHTML = 'Ok'
+                    break;
+            
+            }*/
+
+          /*document.write("Select Type Of Chronic Diesase: ");
+          document.body.innerHTML = 
+          '<button type="button" id="heart">Heart Dieseases</button>'+
+          '<button type="button">Lung Dieseases</button>'+
+          '<button type="button">Liver Dieseases</button>'+
+          '<button type="button">Cancer Dieseases</button>'+
+          '<button type="button">Dibetis Dieseases</button>';
+
+          document.write("hi");
+        }*/
+  
+        </script>
+</head>
+<body>
+   <div>
+    <div><h3>This is a Symptom Checker</h3><br>
+           Please select type of symptom you are Facing <br>
+        <button type="button" onclick="chronic()">Chronic</button>
+        <button type="button" onclick="nonchronic()">Non chronic</button>
+        
+
+        <script lang="javascript">
+          function nonchronic(params){
+            window.open("nonchronic.html","_self");
+         
+          }
+          function chronic(params) {
+            document.write("What Type Of Chronic Diesease Are You Facing : " + "<br>");
+            let btn1 = document.createElement("button");
+            btn1.innerHTML = "Heart Dieseases";
+            btn1.onclick = function heart() {
+              document.writeln("<ul><li><h1>Coronary Heart Dieseases</h1></li></ul><br>");
+              document.writeln("Damage or disease in the heart's major blood vessels. The usual cause is the build-up of plaque. This causes coronary arteries to narrow, limiting blood flow to the heart. Coronary artery disease can range from no symptoms, to chest pain, to a heart attack. Treatments include lifestyle changes, medication, angioplasty and surgery.");
+              document.writeln("<h2>Emergency Contact And Seek Help:</h2>");
+              document.writeln("<h3>Dr Rohit Shahapurkar</h3><small>Heart Transplant Specialist</small>");
+              document.writeln("Cardiac Surgeon ");
+              document.writeln("45 Years Experience Overall");
+              document.writeln("Gmail: RohitShahapurkar19@gmail.com ");
+
+              document.writeln("<h3>Dr. Hasmukh Ravat</h3><small>MD</small>");
+              document.writeln("Cardiologist");
+              document.writeln("25 Years Experience Overall  (16 years as specialist)");
+              document.writeln("Gmail: Hasmukh.Ravat@gmail.com");
+            };
+
+            document.body.appendChild(btn1);
+            let btn2 = document.createElement("button");
+            btn2.innerHTML = "Lung Dieseases";
+            btn2.onclick = function () {
+              document.writeln("<ul><li><h1>Lung Dieseases</h1></li></ul><br>");
+              document.writeln("A group of lung diseases that block airflow and make it difficult to breathe. Emphysema and chronic bronchitis are the most common conditions that make up COPD. Damage to the lungs from COPD can't be reversed. Symptoms include shortness of breath, wheezing or a chronic cough. Rescue inhalers and inhaled or oral steroids can help control symptoms and minimise further damage.");
+              document.writeln("<h2>Emergency Contact And Seek Help:</h2>");
+              document.writeln("<h3>Dr. Nilesh Chinchkar</h3><small>Lung Specialist</small>");
+              document.writeln("Pulmonologist");
+              document.writeln("45 Years Experience Overall");
+              document.writeln("Gmail: Nilesh.Chinchkar@yahoo.com ");
+
+              document.writeln("<h3>Dr Batras Healthcare</h3>");
+              document.writeln("Gmail: www.drbatras.com ");
+
+            };
+
+            document.body.appendChild(btn2);
+          
+          let btn3 = document.createElement("button");
+            btn3.innerHTML = "Liver Dieseases";
+            btn3.onclick = function () {
+              document.writeln("<ul><li><h1>Liver Dieseases</h1></li></ul><br>");
+              document.writeln("Chronic liver damage from a variety of causes leading to scarring and liver failure. Hepatitis and chronic alcohol abuse are frequent causes. Liver damage caused by cirrhosis can't be undone, but further damage can be limited. Initially patients may experience fatigue, weakness and weight loss. During later stages, patients may develop jaundice (yellowing of the skin), gastrointestinal bleeding, abdominal swelling and confusion. Treatments focus on the underlying cause. In advanced cases, a liver transplant may be required.");
+              document.writeln("<h2>Emergency Contact And Seek Help:</h2>");
+              document.writeln("<h3>Tata Cancer Treatment</h3>");
+              document.writeln("<h3>Dr. Chetan Ramesh Kalal</h3><small>Liver Transplant Specialist</small>");
+              document.writeln("Fatty Liver Specialist");
+              document.writeln("45 Years Experience Overall");
+              document.writeln("Gmail: Chetan.Ramesh.Kalal@yahoo.com ");
+
+              document.writeln("<h3>Dr Viral Patrawala</h3><small>MBBS</small>");
+              document.writeln("Gastroenterologist");
+              document.writeln("25 Years Experience Overall  (16 years as specialist)");
+              document.writeln("Gmail: www.Viralhospitals.com ");
+              
+            };
+
+            document.body.appendChild(btn3);
+            let btn4 = document.createElement("button");
+            btn4.innerHTML = "Cancer";
+            btn4.onclick = function () {
+              document.writeln("<ul><li><h1>Cancer</h1></li></ul><br>");
+              document.writeln("A disease in which abnormal cells divide uncontrollably and destroy body tissue.");
+              document.writeln("<h2>Emergency Contact And Seek Help:</h2>");
+              document.writeln("<h3>Tata Cancer Treatment</h3>");
+              document.writeln("<h3>Dr. Dhanlaxmi Shetty</h3><small>OIC, Scientific Officer E</small>");
+              document.writeln("Cancer Cytogenetics");
+              document.writeln("42 Years Experience Overall");
+              document.writeln("Gmail: cytogenetic@actrec.gov.in ");
+
+              document.writeln("<h3>Dr Suresh Advani</h3><small>MBBS</small>");
+              document.writeln("Diabetologist");
+              document.writeln("25 Years Experience Overall  (16 years as specialist)");
+              document.writeln("Gmail: www.suryahospitals.com ");
+              
+            };
+
+            document.body.appendChild(btn4);
+            let btn5 = document.createElement("button");
+            btn5.innerHTML = "Diabetic Dieseases";
+            btn5.onclick = function () {
+              document.writeln("<ul><li><h1>Diabetes</h1></li></ul><br>");
+              document.writeln("A group of diseases that result in too much sugar in the blood (high blood glucose).<br> <h3>MOST COMMON TYPES</h3><br> <h4>Type 2 diabetes<br></h4> A chronic condition that affects the way the body processes blood sugar (glucose). <h4>Type 1 diabetes</h4><br> A chronic condition in which the pancreas produces little or no insulin.<br>");
+              document.writeln("<h2>Emergency Contact And Seek Help:</h2>");
+              document.writeln("<h3>Dr. Bhavik Saglani</h3><small>MBBS</small>");
+              document.writeln("General Physician, Special Interest in Diabetology");
+              document.writeln("13 Years Experience Overall");
+              document.writeln("Gmail: Bhavik.Saglani@gmail.com ");
+
+              document.writeln("<h3>Dr. Abhijit Jadhav</h3><small>MBBS, Diploma in Diabetology (Mumbai University), FCPS - Medicine</small>");
+              document.writeln("Diabetologist");
+              document.writeln("22 Years Experience Overall  (16 years as specialist)");
+              document.writeln("Gmail: Abhijit.Jadhav@gmail.com ");
+
+                
+            };
+
+            document.body.appendChild(btn5);
+          }
+            
+        </script>
+   </div>
+</div>
+</body>
+</html>

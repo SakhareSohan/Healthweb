@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+
+</head>
+<body>
+<button type="button" onclick="reset()">Reset</button>
+    <form id="frm1" action="/action_page.php">
+        
+        <p id="id_work_days">
+        <label><input type="checkbox" id="work_days" value="11"><span>Blisters</span></label>
+        <label><input type="checkbox" id="work_days" value="10"><span>Red Spots</span></label>
+        <label><input type="checkbox" id="work_days" value="1"><span>Fever</span></label>
+        <label><input type="checkbox" id="work_days" value="1"><span>Fatigue</span></label>
+        <label><input type="checkbox" id="work_days" value="9"><span>Loss Of Appetite</span></label>
+        <label><input type="checkbox" id="work_days" value="8"><span>Headache</span></label>
+        <label><input type="checkbox" id="work_days" value="2"><span>Sore Throat</span></label>
+        <label><input type="checkbox" id="work_days" value="7"><span>Muscle Pain</span></label>
+        <label><input type="checkbox" id="work_days" value="2"><span>Runny Nose</span></label>
+        <label><input type="checkbox" id="work_days" value="2"><span>Sneezing</span></label>
+        <label><input type="checkbox" id="work_days" value="2"><span>Nose Congestion</span></label>    
+        <label><input type="checkbox" id="work_days" value="7"><span>Loss Of Smell</span></label>
+        <label><input type="checkbox" id="work_days" value="3"><span>Watery Eyes</span></label>
+        <label><input type="checkbox" id="work_days" value="4"><span>Redness In Eyes</span></label>
+        <label><input type="checkbox" id="work_days" value="5"><span>Yellow Skin & Eyes</span></label>
+        <label><input type="checkbox" id="work_days" value="6"><span>Nausea</span></label>
+        </p>
+        
+        </form>
+        
+        <p>Click To Check Your Symptoms:</p>
+        
+        <button onclick="myFunction()">Check</button>
+        
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        
+<script>
+function reset(){
+  window.open("symptom.html");
+
+}
+function myFunction() {
+  var form = document.getElementById("frm1"),
+  inputs = form.getElementsByTagName("input"),
+  arr = [];
+        
+  for (var i = 0, max = inputs.length; i < max; i += 1) {
+           // Take only those inputs which are checkbox
+    if (inputs[i].type === "checkbox" && inputs[i].checked) {
+    arr.push(inputs[i].value);
+    }
+  }
+
+  arr.sort(function(a, b){return b - a});
+
+  if ( arr[0] == 10 ) { 
+    if ( arr.includes("4")){
+      document.writeln("<ul><li><h1>Scabies</h1></li></ul><br>");
+      document.writeln("A contagious, intensely itchy skin condition caused by a tiny, burrowing mite. Scabies is contagious and spreads quickly through close physical contact in a family, school or nursing home. The most common symptom of scabies is intense itching in the area where the mites burrow. Scabies can be treated by killing the mites and their eggs with medication that's applied from the neck down and left on for eight hours. The mites can also be killed using oral medication.");
+      document.writeln("<h3>Treatment consists of anti-parasitics</h3><br> Scabies can be treated by killing the mites and their eggs with medication that's applied from the neck down and left on for eight hours. The mites can also be killed using oral medication.<br> <h4>Medications</h4><br> Antiparasitic<br> <h4>Self-care</h4><br> Hot water laundry and Dry cleaning<br>");
+      
+    }
+    document.writeln("<ul><li><h1>Chicken Pox</h1></li></ul><br>");
+    document.writeln("A highly contagious viral infection which causes an itchy, blister-like rash on the skin. Chickenpox is highly contagious to those who haven't had the disease or been vaccinated against it. The most characteristic symptom is an itchy, blister-like rash on the skin. Chickenpox can be prevented by a vaccine. Treatment usually involves relieving symptoms, although high-risk groups may receive antiviral medication.");
+    document.writeln("<h3>Treatment consists of pain medications</h3><br> Chickenpox can be prevented by a vaccine. Treatment usually involves relieving symptoms, although high-risk groups may receive antiviral medication. <h4>Medications</h4><br> Analgesic and Antihistamine<br> <h4>Self-care<br></h4> Oatmeal bath and Moisturizer<br>");
+    
+  } else if ( arr[0] == 11 ){
+      if ( arr.includes("4")){
+        document.writeln("<ul><li><h1>Scabies</h1></li></ul><br>");
+        document.writeln("A contagious, intensely itchy skin condition caused by a tiny, burrowing mite. Scabies is contagious and spreads quickly through close physical contact in a family, school or nursing home. The most common symptom of scabies is intense itching in the area where the mites burrow. Scabies can be treated by killing the mites and their eggs with medication that's applied from the neck down and left on for eight hours. The mites can also be killed using oral medication.");
+        document.writeln("<h3>Treatment consists of anti-parasitics</h3><br> Scabies can be treated by killing the mites and their eggs with medication that's applied from the neck down and left on for eight hours. The mites can also be killed using oral medication.<br> <h4>Medications</h4><br> Antiparasitic<br> <h4>Self-care</h4><br> Hot water laundry and Dry cleaning<br>");
+      
+    }
+      document.writeln("<ul><li><h1>Chicken Pox</h1></li></ul><br>");
+      document.writeln("A highly contagious viral infection which causes an itchy, blister-like rash on the skin. Chickenpox is highly contagious to those who haven't had the disease or been vaccinated against it. The most characteristic symptom is an itchy, blister-like rash on the skin. Chickenpox can be prevented by a vaccine. Treatment usually involves relieving symptoms, although high-risk groups may receive antiviral medication.");
+      document.writeln("<h3>Treatment consists of pain medications</h3><br> Chickenpox can be prevented by a vaccine. Treatment usually involves relieving symptoms, although high-risk groups may receive antiviral medication.<br> <h4>Medications</h4><br> Analgesic and Antihistamine<br> <h4>Self-care<br></h4> Oatmeal bath and Moisturizer<br>");
+    
+  }else if ( arr[0] == 9 ) {
+    document.writeln("<ul><li><h1>Pneumonia</h1></li></ul><br>");
+    document.writeln("Infection that inflames air sacs in one or both lungs, which may fill with fluid. With pneumonia, the air sacs may fill with fluid or pus. The infection can be life-threatening to anyone, but particularly to infants, children and people over 65. Symptoms include a cough with phlegm or pus, fever, chills and difficulty breathing. Antibiotics can treat many forms of pneumonia. Some forms of pneumonia can be prevented by vaccines.");
+    document.writeln("<h3>Treatment consists of antibiotics </h3><br>  Antibiotics can treat many forms of pneumonia. Some forms of pneumonia can be prevented by vaccines.<br> <h4>Medications</h4><br> Antibiotics and Penicillin<br> <h4>Supportive care</h4><br. Oxygen therapy, Oral rehydration therapy and IV fluids<br>");
+    
+    document.writeln("<ul><li><h1>Tuberculosis</h1></li></ul><br>");
+    document.writeln("A potentially serious infectious bacterial disease that mainly affects the lungs. The bacteria that cause TB are spread when an infected person coughs or sneezes. Most people infected with the bacteria that cause tuberculosis don't have symptoms. When symptoms do occur, they usually include a cough (sometimes blood-tinged), weight loss, night sweats and fever. Treatment isn't always required for those without symptoms. Patients with active symptoms will require a long course of treatment involving multiple antibiotics.");
+    document.writeln("<h3>Treatment consists of antibiotics </h3><br>  Treatment isn't always required for those without symptoms. Patients with active symptoms will require a long course of treatment involving multiple antibiotics.<br> <h4>Medications<br></h4> Antibiotics<br>");
+    
+    if ( arr.includes("7") && arr.includes("2") ){
+      document.writeln("<ul><li><h1>Measles(Rubeola)</h1></li></ul><br>");
+      document.writeln("A viral infection that's serious for small children but is easily preventable by a vaccine. The disease spreads through the air by respiratory droplets produced from coughing or sneezing. Measles symptoms don't appear until 10 to 14 days after exposure. They include cough, runny nose, inflamed eyes, sore throat, fever and a red, blotchy skin rash. There's no treatment to get rid of an established measles infection, but over-the-counter fever reducers or vitamin A may help with symptoms.");
+      document.writeln("<h3>Treatment consists of preventative measures</h3><br> There's no treatment to get rid of an established measles infection, but over-the-counter fever reducers or vitamin A may help with symptoms.<br> <h4>Medications</h4><br> Analgesic<br>");
+
+    } 
+  }else if ( arr[0] == 8 ) {
+    if ( arr.includes("7") && arr.includes("2") ){
+      document.writeln("<ul><li><h1>Measles(Rubeola)</h1></li></ul><br>");
+      document.writeln("A viral infection that's serious for small children but is easily preventable by a vaccine. The disease spreads through the air by respiratory droplets produced from coughing or sneezing. Measles symptoms don't appear until 10 to 14 days after exposure. They include cough, runny nose, inflamed eyes, sore throat, fever and a red, blotchy skin rash. There's no treatment to get rid of an established measles infection, but over-the-counter fever reducers or vitamin A may help with symptoms.");
+      document.writeln("<h3>Treatment consists of preventative measures</h3><br> There's no treatment to get rid of an established measles infection, but over-the-counter fever reducers or vitamin A may help with symptoms.<br> <h4>Medications</h4><br> Analgesic<br>");
+
+    } else if ( arr.includes("2") || arr.includes("4") ){
+      document.writeln("<ul><li><h1>Common Cold</h1></li></ul><br>");
+      document.writeln("A common viral infection of the nose and throat. In contrast to the flu, a common cold can be caused by many different types of viruses. The condition is generally harmless and symptoms usually resolve within two weeks. Symptoms include a runny nose, sneezing and congestion. High fever or severe symptoms are reasons to see a doctor, especially in children. Most people recover on their own within two weeks. Over-the-counter products and home remedies can help control symptoms.");
+      document.writeln("<h3>Treatment consists of anti-inflammatories and decongestants<h3><br> Most people recover on their own within two weeks. Over-the-counter products and home remedies can help control symptoms.<br> <h4>Self-care<br></h4> Nasal washing, Throat lozenge and Menthol<br> <h4>Medications<br></h4> Nonsteroidal anti-inflammatory drug, Analgesic, Antihistamine, Cough medicine and Decongestant<br>");
+   
+    }
+    document.writeln("<ul><li><h1>Influenza(Flu)</h1></li></ul><br>");
+    document.writeln("A common viral infection that can be deadly, especially in high-risk groups. The flu attacks the lungs, nose and throat. Young children, older adults, pregnant women and people with chronic disease or weak immune systems are at high risk. Symptoms include fever, chills, muscle aches, cough, congestion, runny nose, headaches and fatigue. Flu is primarily treated with rest and fluid intake to allow the body to fight the infection on its own. Paracetamol may help cure the symptoms but NSAIDs should be avoided. An annual vaccine can help prevent the flu and limit its complications.");
+    document.writeln("<h3>Treatment consists of fluids and activity modifications</h3><br> Flu is primarily treated with rest and fluid intake to allow the body to fight the infection on its own. Paracetamol may help cure the symptoms but NSAIDs should be avoided. An annual vaccine can help prevent the flu and limit its complications.<br> <h4>Supportive care<br></h4> Fluid replacement<br> <h4>Self-care<br></h4> Bed rest and Throat lozenge<br>  <h4>Medications<br></h4> Decongestant, Cough medicine, Nonsteroidal anti-inflammatory drug, Analgesic and Antiviral drug<br>");
+ 
+  }else if ( arr[0] == 7 ) {
+    document.writeln("<ul><li><h1>Common Cold</h1></li></ul><br>");
+    document.writeln("A common viral infection of the nose and throat. In contrast to the flu, a common cold can be caused by many different types of viruses. The condition is generally harmless and symptoms usually resolve within two weeks. Symptoms include a runny nose, sneezing and congestion. High fever or severe symptoms are reasons to see a doctor, especially in children. Most people recover on their own within two weeks. Over-the-counter products and home remedies can help control symptoms.");
+    document.writeln("<h3>Treatment consists of anti-inflammatories and decongestants<h3><br> Most people recover on their own within two weeks. Over-the-counter products and home remedies can help control symptoms.<br> <h4>Self-care<br></h4> Nasal washing, Throat lozenge and Menthol<br> <h4>Medications<br></h4> Nonsteroidal anti-inflammatory drug, Analgesic, Antihistamine, Cough medicine and Decongestant<br>");
+    
+  } else if ( arr[0] == 6 ) {
+    document.writeln("<ul><li><h1>Influenza(Flu)</h1></li></ul><br>");
+    document.writeln("A common viral infection that can be deadly, especially in high-risk groups. The flu attacks the lungs, nose and throat. Young children, older adults, pregnant women and people with chronic disease or weak immune systems are at high risk. Symptoms include fever, chills, muscle aches, cough, congestion, runny nose, headaches and fatigue. Flu is primarily treated with rest and fluid intake to allow the body to fight the infection on its own. Paracetamol may help cure the symptoms but NSAIDs should be avoided. An annual vaccine can help prevent the flu and limit its complications.");
+    document.writeln("<h3>Treatment consists of fluids and activity modifications</h3><br> Flu is primarily treated with rest and fluid intake to allow the body to fight the infection on its own. Paracetamol may help cure the symptoms but NSAIDs should be avoided. An annual vaccine can help prevent the flu and limit its complications.<br> <h4>Supportive care<br></h4> Fluid replacement<br> <h4>Self-care<br></h4> Bed rest and Throat lozenge<br>  <h4>Medications<br></h4> Decongestant, Cough medicine, Nonsteroidal anti-inflammatory drug, Analgesic and Antiviral drug<br>");
+
+  } else if ( arr[0] == 5 ) {
+    document.writeln("<ul><li><h1>Hepatitis B</h1></li></ul><br>");
+    document.writeln("A serious liver infection caused by the hepatitis B virus that's easily preventable by a vaccine. This disease is most commonly spread by exposure to infected bodily fluids. Symptoms are variable and include yellowing of the eyes, abdominal pain and dark urine. Some people, particularly children, don't experience any symptoms. In chronic cases, liver failure, cancer or scarring can occur. The condition often clears up on its own. Chronic cases require medication and possibly a liver transplant.");
+    document.writeln("<h3>Treatment depends on severity</h3><br> The condition often clears up on its own. Chronic cases require medication and possibly a liver transplant.<br> <h4>Medications<br></h4> Antiviral drug<br> <h4>Self-care<br></h4> Avoid alcohol<br>");
+
+  } else if ( arr[0] == 4 ) {
+    document.writeln("<ul><li><h1>Conjunctivitis</h1></li></ul><br>");
+    document.writeln("Inflammation or infection of the outer membrane of the eyeball and the inner eyelid. Conjunctivitis, or pink eye, is an irritation or inflammation of the conjunctiva, which covers the white part of the eyeball. It can be caused by allergies or a bacterial or viral infection. Conjunctivitis can be extremely contagious and is spread by contact with eye secretions from someone who is infected. Symptoms include redness, itching and tearing of the eyes. It can also lead to discharge or crusting around the eyes. It's important to stop wearing contact lenses whilst affected by conjunctivitis. It often resolves on its own, but treatment can speed the recovery process. Allergic conjunctivitis can be treated with antihistamines. Bacterial conjunctivitis can be treated with antibiotic eye drops.");
+    document.writeln("<h3>Treatment consists of self care</h3><br> It's important to stop wearing contact lenses whilst affected by conjunctivitis. It often resolves on its own, but treatment can speed the recovery process. Allergic conjunctivitis can be treated with antihistamines. Bacterial conjunctivitis can be treated with antibiotic eye drops.<br> <h4>Self-care<br></h4> Cold compress and Artificial tears<br> <h4>Supportive care<br></h4> Can be self-healing <h4>Medications<br></h4> Antibiotics and Steroid<br>");
+
+    document.writeln("<ul><li><h1>Common Cold</h1></li></ul><br>");
+    document.writeln("A common viral infection of the nose and throat. In contrast to the flu, a common cold can be caused by many different types of viruses. The condition is generally harmless and symptoms usually resolve within two weeks. Symptoms include a runny nose, sneezing and congestion. High fever or severe symptoms are reasons to see a doctor, especially in children. Most people recover on their own within two weeks. Over-the-counter products and home remedies can help control symptoms.");
+    document.writeln("<h3>Treatment consists of anti-inflammatories and decongestants<h3><br> Most people recover on their own within two weeks. Over-the-counter products and home remedies can help control symptoms.<br> <h4>Self-care<br></h4> Nasal washing, Throat lozenge and Menthol<br> <h4>Medications<br></h4> Nonsteroidal anti-inflammatory drug, Analgesic, Antihistamine, Cough medicine and Decongestant<br>");
+    
+  } else if ( arr[0] == 3 ) {
+    document.writeln("<ul><li><h1>Common Cold</h1></li></ul><br>");
+    document.writeln("A common viral infection of the nose and throat. In contrast to the flu, a common cold can be caused by many different types of viruses. The condition is generally harmless and symptoms usually resolve within two weeks. Symptoms include a runny nose, sneezing and congestion. High fever or severe symptoms are reasons to see a doctor, especially in children. Most people recover on their own within two weeks. Over-the-counter products and home remedies can help control symptoms.");
+    document.writeln("<h3>Treatment consists of anti-inflammatories and decongestants<h3><br> Most people recover on their own within two weeks. Over-the-counter products and home remedies can help control symptoms.<br> <h4>Self-care<br></h4> Nasal washing, Throat lozenge and Menthol<br> <h4>Medications<br></h4> Nonsteroidal anti-inflammatory drug, Analgesic, Antihistamine, Cough medicine and Decongestant<br>");
+    
+    document.writeln("<ul><li><h1>Conjunctivitis</h1></li></ul><br>");
+    document.writeln("Inflammation or infection of the outer membrane of the eyeball and the inner eyelid. Conjunctivitis, or pink eye, is an irritation or inflammation of the conjunctiva, which covers the white part of the eyeball. It can be caused by allergies or a bacterial or viral infection. Conjunctivitis can be extremely contagious and is spread by contact with eye secretions from someone who is infected. Symptoms include redness, itching and tearing of the eyes. It can also lead to discharge or crusting around the eyes. It's important to stop wearing contact lenses whilst affected by conjunctivitis. It often resolves on its own, but treatment can speed the recovery process. Allergic conjunctivitis can be treated with antihistamines. Bacterial conjunctivitis can be treated with antibiotic eye drops.");
+    document.writeln("<h3>Treatment consists of self care</h3><br> It's important to stop wearing contact lenses whilst affected by conjunctivitis. It often resolves on its own, but treatment can speed the recovery process. Allergic conjunctivitis can be treated with antihistamines. Bacterial conjunctivitis can be treated with antibiotic eye drops.<br> <h4>Self-care<br></h4> Cold compress and Artificial tears<br> <h4>Supportive care<br></h4> Can be self-healing <h4>Medications<br></h4> Antibiotics and Steroid<br>");
+
+
+  } else if ( arr[0] == 2 ) {
+    document.writeln("<ul><li><h1>Common Cold</h1></li></ul><br>");
+    document.writeln("A common viral infection of the nose and throat. In contrast to the flu, a common cold can be caused by many different types of viruses. The condition is generally harmless and symptoms usually resolve within two weeks. Symptoms include a runny nose, sneezing and congestion. High fever or severe symptoms are reasons to see a doctor, especially in children. Most people recover on their own within two weeks. Over-the-counter products and home remedies can help control symptoms.");
+    document.writeln("<h3>Treatment consists of anti-inflammatories and decongestants<h3><br> Most people recover on their own within two weeks. Over-the-counter products and home remedies can help control symptoms.<br> <h4>Self-care<br></h4> Nasal washing, Throat lozenge and Menthol<br> <h4>Medications<br></h4> Nonsteroidal anti-inflammatory drug, Analgesic, Antihistamine, Cough medicine and Decongestant<br>");
+    
+    document.writeln("<ul><li><h1>Influenza(Flu)</h1></li></ul><br>");
+    document.writeln("A common viral infection that can be deadly, especially in high-risk groups. The flu attacks the lungs, nose and throat. Young children, older adults, pregnant women and people with chronic disease or weak immune systems are at high risk. Symptoms include fever, chills, muscle aches, cough, congestion, runny nose, headaches and fatigue. Flu is primarily treated with rest and fluid intake to allow the body to fight the infection on its own. Paracetamol may help cure the symptoms but NSAIDs should be avoided. An annual vaccine can help prevent the flu and limit its complications.");
+    document.writeln("<h3>Treatment consists of fluids and activity modifications</h3><br> Flu is primarily treated with rest and fluid intake to allow the body to fight the infection on its own. Paracetamol may help cure the symptoms but NSAIDs should be avoided. An annual vaccine can help prevent the flu and limit its complications.<br> <h4>Supportive care<br></h4> Fluid replacement<br> <h4>Self-care<br></h4> Bed rest and Throat lozenge<br>  <h4>Medications<br></h4> Decongestant, Cough medicine, Nonsteroidal anti-inflammatory drug, Analgesic and Antiviral drug<br>");
+    
+    document.writeln("<ul><li><h1>Measles(Rubeola)</h1></li></ul><br>");
+    document.writeln("A viral infection that's serious for small children but is easily preventable by a vaccine. The disease spreads through the air by respiratory droplets produced from coughing or sneezing. Measles symptoms don't appear until 10 to 14 days after exposure. They include cough, runny nose, inflamed eyes, sore throat, fever and a red, blotchy skin rash. There's no treatment to get rid of an established measles infection, but over-the-counter fever reducers or vitamin A may help with symptoms.");
+    document.writeln("<h3>Treatment consists of preventative measures</h3><br> There's no treatment to get rid of an established measles infection, but over-the-counter fever reducers or vitamin A may help with symptoms.<br> <h4>Medications</h4><br> Analgesic<br>");
+
+  } else if ( arr[0] == 1 ) {
+    document.writeln("<ul><li><h1>Common Cold</h1></li></ul><br>");
+    document.writeln("A common viral infection of the nose and throat. In contrast to the flu, a common cold can be caused by many different types of viruses. The condition is generally harmless and symptoms usually resolve within two weeks. Symptoms include a runny nose, sneezing and congestion. High fever or severe symptoms are reasons to see a doctor, especially in children. Most people recover on their own within two weeks. Over-the-counter products and home remedies can help control symptoms.");
+    document.writeln("<h3>Treatment consists of anti-inflammatories and decongestants<h3><br> Most people recover on their own within two weeks. Over-the-counter products and home remedies can help control symptoms.<br> <h4>Self-care<br></h4> Nasal washing, Throat lozenge and Menthol<br> <h4>Medications<br></h4> Nonsteroidal anti-inflammatory drug, Analgesic, Antihistamine, Cough medicine and Decongestant<br>");
+    
+    document.writeln("<ul><li><h1>Influenza(Flu)</h1></li></ul><br>");
+    document.writeln("A common viral infection that can be deadly, especially in high-risk groups. The flu attacks the lungs, nose and throat. Young children, older adults, pregnant women and people with chronic disease or weak immune systems are at high risk. Symptoms include fever, chills, muscle aches, cough, congestion, runny nose, headaches and fatigue. Flu is primarily treated with rest and fluid intake to allow the body to fight the infection on its own. Paracetamol may help cure the symptoms but NSAIDs should be avoided. An annual vaccine can help prevent the flu and limit its complications.");
+    document.writeln("<h3>Treatment consists of fluids and activity modifications</h3><br> Flu is primarily treated with rest and fluid intake to allow the body to fight the infection on its own. Paracetamol may help cure the symptoms but NSAIDs should be avoided. An annual vaccine can help prevent the flu and limit its complications.<br> <h4>Supportive care<br></h4> Fluid replacement<br> <h4>Self-care<br></h4> Bed rest and Throat lozenge<br>  <h4>Medications<br></h4> Decongestant, Cough medicine, Nonsteroidal anti-inflammatory drug, Analgesic and Antiviral drug<br>");
+    
+    document.writeln("<ul><li><h1>Measles(Rubeola)</h1></li></ul><br>");
+    document.writeln("A viral infection that's serious for small children but is easily preventable by a vaccine. The disease spreads through the air by respiratory droplets produced from coughing or sneezing. Measles symptoms don't appear until 10 to 14 days after exposure. They include cough, runny nose, inflamed eyes, sore throat, fever and a red, blotchy skin rash. There's no treatment to get rid of an established measles infection, but over-the-counter fever reducers or vitamin A may help with symptoms.");
+    document.writeln("<h3>Treatment consists of preventative measures</h3><br> There's no treatment to get rid of an established measles infection, but over-the-counter fever reducers or vitamin A may help with symptoms.<br> <h4>Medications</h4><br> Analgesic<br>");
+    
+    document.writeln("<ul><li><h1>Chicken Pox</h1></li></ul><br>");
+    document.writeln("A highly contagious viral infection which causes an itchy, blister-like rash on the skin. Chickenpox is highly contagious to those who haven't had the disease or been vaccinated against it. The most characteristic symptom is an itchy, blister-like rash on the skin. Chickenpox can be prevented by a vaccine. Treatment usually involves relieving symptoms, although high-risk groups may receive antiviral medication.");
+    document.writeln("<h3>Treatment consists of pain medications</h3><br> Chickenpox can be prevented by a vaccine. Treatment usually involves relieving symptoms, although high-risk groups may receive antiviral medication. <h4>Medications</h4><br> Analgesic and Antihistamine<br> <h4>Self-care<br></h4> Oatmeal bath and Moisturizer<br>");
+    
+    document.writeln("<ul><li><h1>Tuberculosis</h1></li></ul><br>");
+    document.writeln("A potentially serious infectious bacterial disease that mainly affects the lungs. The bacteria that cause TB are spread when an infected person coughs or sneezes. Most people infected with the bacteria that cause tuberculosis don't have symptoms. When symptoms do occur, they usually include a cough (sometimes blood-tinged), weight loss, night sweats and fever. Treatment isn't always required for those without symptoms. Patients with active symptoms will require a long course of treatment involving multiple antibiotics.");
+    document.writeln("<h3>Treatment consists of antibiotics </h3><br>  Treatment isn't always required for those without symptoms. Patients with active symptoms will require a long course of treatment involving multiple antibiotics.<br> <h4>Medications<br></h4> Antibiotics<br>");
+    
+  } else{
+      alert("Please Select Your Symptoms!!!");
+     }
+
+  //document.getElementById("demo").innerHTML = JSON.stringify(arr, null, 2);
+
+  
+}
+</script>
+</body>
+</html>

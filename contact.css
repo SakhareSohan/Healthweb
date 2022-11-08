@@ -1,0 +1,329 @@
+:root{
+    --mainclr:#239f85;
+    --secclr:#ff5d22;
+    --third:#DFE4E0;
+    --mainafterclr:hsl(167, 81%, 79%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    transition: .2s;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+    
+}
+.header{
+    padding: 1rem 7%;
+    background-color: var(--mainclr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header #logo{
+    width: 50px;
+}
+.navbar a{
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    position: relative;
+  
+}
+.navbar a:after{
+    content: '';
+    background: var(--secclr);
+    width: 0;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    transition: .3s;
+}
+.navbar a:hover:after{
+    content: '';
+    background: var(--secclr);
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+}
+.icons div{
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: white;
+    display: none;
+}
+.icons a{
+    color: white;
+    background: var(--secclr);
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    transition: .5s;
+}
+.icons a:hover{
+    background: transparent;
+    border: 1px solid var(--secclr);
+}
+.navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.background-image{
+    background: url(images/background.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 6%;
+    position: relative;
+
+}
+.background-content{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-80%);
+}
+.background-content h1{
+    color: black;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.background-content p{
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.background-content a{
+    background: var(--secclr);
+    padding: 1.5rem 3rem;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.5rem;
+    transition: .5s;
+}
+.background-content a:hover{
+    background: transparent;
+    border: 1px solid var(--secclr);
+    color: black;
+}
+.about{
+    padding: 6rem 7%;
+    background: var(--third);
+}
+.main-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.inner-about{
+    flex: 1 1 45rem;
+}
+
+.inner-about .inner-about-image img{
+    width: 100%;
+}
+.about-content{
+    width: 80%;
+}
+.about-content h1{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.about-content p{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+.about-content a{
+    background: var(--secclr);
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    color: white;
+    transition: .5s;
+}
+.about-content a:hover{
+    background: transparent;
+    border: 1px solid var(--secclr);
+    color: black;
+}
+#contact{
+    
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 347px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#contact::before{ 
+    content: "";
+    position: absolute;
+    background:url('image/conta.jpg') no-repeat center center/cover;
+    height:400px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.69;
+}
+
+#contact h1{
+    color: #239f85;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 40px;
+    padding: 14px 98px;
+}
+
+#contact p{
+    color:rgb(93, 90, 90);
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Bree Serif', serif;
+}
+
+#info{
+    margin: 34px;
+    display: flex;
+}
+
+#info .clm {
+    
+    padding: 24px;
+    margin: 50px 51px;
+    width: 55%;
+    height: 505%;
+}
+#form h1{
+    font-size: 26px;
+    text-align: center;
+}
+.form-style-7{
+	max-width:400px;
+	margin:24px auto;
+	background:#fff;
+	border-radius:2px;
+	padding:20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-style-7 h1{
+	display: block;
+	text-align: center;
+	padding: 0;
+	margin: 0px 0px 20px 0px;
+	color: #5C5C5C;
+	font-size:x-large;
+}
+.form-style-7 ul{
+	list-style:none;
+	padding:0;
+	margin:0;	
+}
+.form-style-7 li{
+	display: block;
+	padding: 9px;
+	border:1px solid #433131;
+	margin-bottom: 30px;
+	border-radius: 3px;
+}
+.form-style-7 li:last-child{
+	border:none;
+	margin-bottom: 0px;
+	text-align: center;
+}
+.form-style-7 li > label{
+	display: block;
+	float: left;
+	margin-top: -19px;
+	background: #FFFFFF;
+	/* height: 14px; */
+	padding: 2px 5px 2px 5px;
+	color: #B9B9B9;
+	font-size: 14px;
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.form-style-7 input[type="text"],
+.form-style-7 input[type="date"],
+.form-style-7 input[type="datetime"],
+.form-style-7 input[type="email"],
+.form-style-7 input[type="number"],
+.form-style-7 input[type="search"],
+.form-style-7 input[type="time"],
+.form-style-7 input[type="url"],
+.form-style-7 input[type="password"],
+.form-style-7 textarea,
+.form-style-7 select 
+{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	display: block;
+	outline: none;
+	border: none;
+	height: 25px;
+	line-height: 25px;
+	font-size: 16px;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.form-style-7 li > span{
+    background: #cdc8c8;
+    display: block;
+    padding: 3px;
+    margin: 0 -9px -9px -9px;
+    text-align: center;
+    color: #6b6565;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px
+}
+.form-style-7 textarea{
+	resize:none;
+}
+.form-style-7 input[type="submit"],
+.form-style-7 input[type="button"]{
+	background: #2471FF;
+	border: none;
+	padding: 10px 20px 10px 20px;
+	border-bottom: 3px solid #5994FF;
+	border-radius: 3px;
+	color: #D2E2FF;
+}
+.form-style-7 input[type="submit"]:hover,
+.form-style-7 input[type="button"]:hover{
+	background: #6B9FFF;
+	color:#fff;
+}
+
+.img img{
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+    border-radius: 2px;
+}
+
+.table h1{
+    font-size: 20px;
+    margin: 10px;
+    padding: 2px;
+}
+/* footer */
